@@ -13,7 +13,7 @@ export const Header = () => {
   return (
     <div className="Header">
       <div className="Header-SectionLeft">
-        <a className="Header-Logo Logo" href="/home">
+        <a className="Header-Logo Logo" href="#/">
           <img
             className="Logo-Image"
             src="./img/icons-page/logo.svg"
