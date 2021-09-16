@@ -1,5 +1,5 @@
 # Products catalog
-[DEMO LINK](https://kshvetsova.github.io/Products_catalog/)
+[DEMO LINK](https://kshvetsova.github.io/products_catalog/)
 
 Implemented Products catalog following [this design](https://www.figma.com/file/uEetgWenSRxk9jgiym6Yzp/Phone-catalog-redesign?node-id=1%3A2).
 The design 1440px, adaptive for: 
