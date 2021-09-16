@@ -17,7 +17,7 @@
     flex-grow: 1;
 
     &::placeholder {
-      @include fontSet("Mont-SemiBold", 14px);
+      @include fontSet("Mont Semi Bold", 14px);
       color: $colorIcons;
       line-height: 17px;
     }

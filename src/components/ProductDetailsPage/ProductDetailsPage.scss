@@ -46,7 +46,7 @@
       justify-content: center;
       align-items: center;
       margin-right: 16px;
-      @include fontSet("Mont-SemiBold", 12px);
+      @include fontSet("Mont Semi Bold", 12px);
       color: $colorSecondary;
       line-height: 15.3px;
 
@@ -57,7 +57,7 @@
   }
 
   &-Title {
-    @include fontSet("Mont-Bold", 32px);
+    @include fontSet("Mont Bold", 32px);
     color: $colorPrimary;
     margin-bottom: 40px;
     width: 90%;
@@ -136,7 +136,7 @@
     margin-bottom: 49px;
 
     &-Title {
-      @include fontSet("Mont-SemiBold", 12px);
+      @include fontSet("Mont Semi Bold", 12px);
       color: $colorSecondary;
       margin-bottom: 8px;
     }
@@ -189,7 +189,7 @@
     margin-bottom: 57px;
 
     &-Title {
-      @include fontSet("Mont-SemiBold", 12px);
+      @include fontSet("Mont Semi Bold", 12px);
       color: $colorSecondary;
       margin-bottom: 8px;
     }
@@ -221,7 +221,7 @@
       height: 32px;
       text-align: center;
       line-height: 32px;
-      @include fontSet("Mont-Regular", 14px);
+      @include fontSet("Mont Regular", 14px);
       color: $colorPrimary;
       border: 1px solid $colorIcons;
       transition: border-color 0.3s;
@@ -239,12 +239,12 @@
   }
 
   .price {
-    @include fontSet("Mont-Bold", 32px);
+    @include fontSet("Mont Bold", 32px);
     line-height: 40px;
   }
 
   &-ProductId {
-    @include fontSet("Mont-SemiBold", 12px);
+    @include fontSet("Mont Semi Bold", 12px);
     color: $colorIcons;
     white-space: nowrap;
   }
@@ -257,7 +257,7 @@
     width: 49%;
 
     &-Title {
-      @include fontSet("Mont-Bold", 22px);
+      @include fontSet("Mont Bold", 22px);
       color: $colorPrimary;
       line-height: 30px;
       position: relative;
@@ -277,7 +277,7 @@
     }
 
     &-Item {
-      @include fontSet("Mont-Regular", 14px);
+      @include fontSet("Mont Regular", 14px);
       color: $colorSecondary;
       line-height: 21px;
       margin-bottom: 32px;
@@ -289,7 +289,7 @@
 
     &-ItemTitle {
       margin-bottom: 16px;
-      @include fontSet("Mont-SemiBold", 20px);
+      @include fontSet("Mont Semi Bold", 20px);
       line-height: 25px;
       color: $colorPrimary;
     }
@@ -299,7 +299,7 @@
     width: 45%;
 
     &-Title {
-      @include fontSet("Mont-Bold", 22px);
+      @include fontSet("Mont Bold", 22px);
       color: $colorPrimary;
       line-height: 30px;
       position: relative;
@@ -330,11 +330,11 @@
 
     &-Name {
       color: $colorSecondary;
-      @include fontSet("Mont-Regular", 14px);
+      @include fontSet("Mont Regular", 14px);
     }
 
     &-Value {
-      @include fontSet("Mont-Regular", 14px);
+      @include fontSet("Mont Regular", 14px);
       color: $colorPrimary;
     }
   }
@@ -349,7 +349,7 @@
   &-Button {
     color: $colorSecondary;
     margin-left: 10px;
-    @include fontSet("Mont-SemiBold", 12px);
+    @include fontSet("Mont Semi Bold", 12px);
     line-height: 15.3px;
     transition: color 0.3s;
 
@@ -445,11 +445,11 @@
 
     &-Title,
     .price {
-      @include fontSet("Mont-Bold", 25px);
+      @include fontSet("Mont Bold", 25px);
     }
 
     .About-ItemTitle {
-      @include fontSet("Mont-SemiBold", 18px);
+      @include fontSet("Mont Semi Bold", 18px);
     }
   }
 }

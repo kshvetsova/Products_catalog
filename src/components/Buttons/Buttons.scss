@@ -7,7 +7,7 @@
   &-ButtonAdd {
     padding: 7px 46px;
     border: 1px solid $colorPrimary;
-    @include fontSet("Mont-SemiBold", 14px);
+    @include fontSet("Mont Semi Bold", 14px);
     text-align: center;
     line-height: 14px;
     color: $colorBackground;
@@ -49,7 +49,7 @@
   &-ButtonAdded {
     height: 40px;
     border: 1px solid $colorElements;
-    @include fontSet("Mont-SemiBold", 14px);
+    @include fontSet("Mont Semi Bold", 14px);
     text-align: center;
     line-height: 40px;
     color: $colorSelected;

@@ -26,28 +26,28 @@
       justify-content: center;
       align-items: center;
       margin-right: 16px;
-      @include fontSet("Mont-SemiBold", 12px);
+      @include fontSet("Mont Semi Bold", 12px);
       color: $colorSecondary;
       line-height: 15.3px;
     }
   }
 
   &-Title {
-    @include fontSet("Mont-Bold", 32px);
+    @include fontSet("Mont Bold", 32px);
     color: $colorPrimary;
     margin-bottom: 8px;
     line-height: 40px;
   }
 
   &-Count {
-    @include fontSet("Mont-Regular", 14px);
+    @include fontSet("Mont Regular", 14px);
     color: $colorSecondary;
     margin-bottom: 40px;
     line-height: 21px;
   }
 
   &-Results {
-    @include fontSet("Mont-Regular", 14px);
+    @include fontSet("Mont Regular", 14px);
     color: $colorSecondary;
     margin-bottom: 24px;
     line-height: 21px;
@@ -84,7 +84,7 @@
   }
 
   &-SelectName {
-    @include fontSet("Mont-SemiBold", 12px);
+    @include fontSet("Mont Semi Bold", 12px);
     color: $colorSecondary;
     margin-bottom: 4px;
     line-height: 15px;
@@ -111,16 +111,16 @@
     }
     
     &-Title {
-      @include fontSet("Mont-Bold", 25px);
+      @include fontSet("Mont Bold", 25px);
     }
 
     &-Count {
-      @include fontSet("Mont-Regular", 12px);
+      @include fontSet("Mont Regular", 12px);
       margin-bottom: 30px;
     }
 
     &-Results {
-      @include fontSet("Mont-Regular", 12px);
+      @include fontSet("Mont Regular", 12px);
     }
 
     &-Content {

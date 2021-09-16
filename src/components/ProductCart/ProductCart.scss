@@ -61,7 +61,7 @@
 
   &-Name,
   &-Quantity {
-    @include fontSet("Mont-Regular", 14px);
+    @include fontSet("Mont Regular", 14px);
     color: $colorPrimary;
     line-height: 18px;
   }
@@ -99,7 +99,7 @@
   }
 
   &-Price {
-    @include fontSet("Mont-Bold", 22px);
+    @include fontSet("Mont Bold", 22px);
     color: $colorPrimary;
     line-height: 30px;
     width: 61px;

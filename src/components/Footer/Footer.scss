@@ -10,7 +10,7 @@
   align-items: center;
   padding-right: 24px;
   z-index: -1;
-  @include fontSet("Mont-Bold", 12px);
+  @include fontSet("Mont Bold", 12px);
   color: $colorSecondary;
   line-height: 11px;
 
@@ -35,7 +35,7 @@
   }
 
   &-ScrollText {
-    @include fontSet("Mont-SemiBold", 12px);
+    @include fontSet("Mont Semi Bold", 12px);
     margin-right: 16px;
     line-height: 15px;
   }

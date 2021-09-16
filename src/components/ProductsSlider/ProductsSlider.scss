@@ -15,7 +15,7 @@
   }
 
   &-Title {
-    @include fontSet("Mont-Bold", 32px);
+    @include fontSet("Mont Bold", 32px);
     color: $colorPrimary;
     line-height: 40px;
   }
@@ -85,7 +85,7 @@
     margin-bottom: 50px;
 
     &-Title {
-      @include fontSet("Mont-Bold", 25px);
+      @include fontSet("Mont Bold", 25px);
     }
   }
 }

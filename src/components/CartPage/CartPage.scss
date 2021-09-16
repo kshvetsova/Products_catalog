@@ -19,7 +19,7 @@
   }
 
   &-Title {
-    @include fontSet("Mont-Bold", 32px);
+    @include fontSet("Mont Bold", 32px);
     color: $colorPrimary;
     margin-top: 16px;
     margin-bottom: 24px;
@@ -49,20 +49,20 @@
   }
 
   &-CounterPrice {
-    @include fontSet("Mont-Bold", 32px);
+    @include fontSet("Mont Bold", 32px);
     color: $colorPrimary;
     line-height: 40px;
   }
 
   &-CounterItems {
-    @include fontSet("Mont-Regular", 14px);
+    @include fontSet("Mont Regular", 14px);
     color: $colorSecondary;
     line-height: 21px;
     margin-bottom: 48px;
   }
 
   &-Checkout {
-    @include fontSet("Mont-SemiBold", 14px);
+    @include fontSet("Mont Semi Bold", 14px);
     border: 1px solid $colorPrimary;
     color: $colorBackground;
     line-height: 21px;
@@ -86,7 +86,7 @@
     &::after {
       content: "Checkout";
       position: absolute;
-      @include fontSet("Mont-SemiBold", 14px);
+      @include fontSet("Mont Semi Bold", 14px);
       line-height: 21px;
       display: flex;
       justify-content: center;
@@ -137,7 +137,7 @@
 
     &-Title,
     &-CounterPrice {
-      @include fontSet("Mont-Bold", 25px);
+      @include fontSet("Mont Bold", 25px);
     }
 
     &-CartGif {

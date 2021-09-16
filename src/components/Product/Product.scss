@@ -37,7 +37,7 @@
 
     &::after {
       content: "Read more";
-      @include fontSet("Mont-SemiBold", 16px);
+      @include fontSet("Mont Semi Bold", 16px);
       color: $colorBackground;
       width: 120px;
       height: 50px;
@@ -78,7 +78,7 @@
   }
 
   &-Name {
-    @include fontSet("Mont-Regular", 14px);
+    @include fontSet("Mont Regular", 14px);
     color: $colorPrimary;
     line-height: 21px;
   }
@@ -99,7 +99,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include fontSet("Mont-SemiBold", 12px);
+    @include fontSet("Mont Semi Bold", 12px);
     line-height: 15px;
   }
 
@@ -121,13 +121,13 @@
 
   &-Price {
     margin-right: 8px;
-    @include fontSet("Mont-Bold", 22px);
+    @include fontSet("Mont Bold", 22px);
     color: $colorPrimary;
     line-height: 28px;
   }
 
   &-Sale {
-    @include fontSet("Mont-Regular", 22px);
+    @include fontSet("Mont Regular", 22px);
     color: $colorSecondary;
     line-height: 28px;
     position: relative;
