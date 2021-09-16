@@ -39,13 +39,13 @@
   &-Close {
     width: 16px;
     height: 16px;
-    background-image: url("/img/icons-page/close.svg");
+    background-image: url("../icons/close.svg");
     background-position: center;
     background-repeat: no-repeat;
     transition: background-image 0.3s;
 
     &:hover {
-      background-image: url("/img/icons-page/close-hover.svg");
+      background-image: url("../icons/close-hover.svg");
     }
   }
 
@@ -86,13 +86,13 @@
   }
 
   &-Add {
-    background-image: url("/img/icons-page/plus.svg");
+    background-image: url("../icons/plus.svg");
   }
 
   &-Remove {
-    background-image: url("/img/icons-page/minus.svg");
+    background-image: url("../icons/minus.svg");
     &:disabled {
-      background-image: url("/img/icons-page/minus-disabled.svg");
+      background-image: url("../icons/minus-disabled.svg");
       border-color: $colorElements;
       cursor: not-allowed;
     }

@@ -23,11 +23,11 @@
     transition: border-color 0.3s;
 
     &_prev {
-      background-image: url("/img/icons-page/prev.svg");
+      background-image: url("../icons/prev.svg");
     }
 
     &_next {
-      background-image: url("/img/icons-page/next.svg");
+      background-image: url("../icons/next.svg");
     }
 
     &:hover {
@@ -57,12 +57,12 @@
   }
 
   .disabled_next {
-    background-image: url("/img/icons-page/next-disabled.svg");
+    background-image: url("../icons/next-disabled.svg");
     border-color: $colorElements;
   }
 
   .disabled_prev {
-    background-image: url("/img/icons-page/prev-disabled.svg");
+    background-image: url("../icons/prev-disabled.svg");
     border-color: $colorElements;
   }
 }
