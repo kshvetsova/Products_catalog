@@ -1,0 +1,66 @@
+import React, {useContext} from 'react';
+import './Product.scss';
+import { useHistory } from 'react-router';
+import { PropTypes } from 'prop-types';
+import { Buttons } from '../Buttons';
+import { ProductsContext } from '../../ProductsProvider';
+import classNames from 'classnames';
+
+export const Product = ({ images, name, price, tech, id, type, option }) => {
+  const { path } = useContext(ProductsContext);
+  const history = useHistory();
+
+  return (
+    <div className="Product">
+      <button
+        className="Product-ImageContainer"
+        type="button"
+        onClick={() => history.push(
+          path.includes(`${type}/product`)
+            ? `${id}`
+            : `${type}/product/${id}`
+        )}
+      >
+        <img
+          className={classNames('Product-Image', {
+            watches_image: option === "40mm",
+          })}
+          src={images[0]}
+          alt="Iphone"
+          width="190px"
+        />
+      </button>
+      <div className="Product-Info">
+        <h3 className="Product-Name">
+          {name}
+        </h3>
+        <div className="Product-PriceBlock PriceBlock">
+          <div className="PriceBlock-Price">{`$${price[0]}`}</div>
+          <div className="PriceBlock-Sale">
+            {price[1] ? `$${price[1]}` : ''}
+          </div>
+        </div>
+        <div className="line">{}</div>
+        <ul className="Product-Details Details">
+          {tech.map(([name, value]) => (
+            <li className="Details-Item" key={name}>
+              <p className="Details-Name">{name}</p>
+              <p className="Details-Value">{value}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <Buttons id={id} price={price[0]} name={name} image={images[0]}/>
+    </div>
+  );
+}
+
+Product.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  name: PropTypes.string.isRequired,
+  price: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired,
+  id: PropTypes.number.isRequired,
+  type: PropTypes.string.isRequired,
+  option: PropTypes.string.isRequired,
+  tech: PropTypes.arrayOf(PropTypes.array.isRequired).isRequired,
+};
