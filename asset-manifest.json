@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.c1aa3110.chunk.css",
+    "main.css": "./static/css/main.174286d6.chunk.css",
     "main.js": "./static/js/main.ae26e815.chunk.js",
     "main.js.map": "./static/js/main.ae26e815.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.e1f50cee.js",
@@ -8,16 +8,15 @@
     "static/js/2.7f13ae1c.chunk.js": "./static/js/2.7f13ae1c.chunk.js",
     "static/js/2.7f13ae1c.chunk.js.map": "./static/js/2.7f13ae1c.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.6676a7946637381dbed4f03f159648a1.js": "./precache-manifest.6676a7946637381dbed4f03f159648a1.js",
+    "precache-manifest.384f0ef2fc428e80b40b7457f2ec75a7.js": "./precache-manifest.384f0ef2fc428e80b40b7457f2ec75a7.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.c1aa3110.chunk.css.map": "./static/css/main.c1aa3110.chunk.css.map",
-    "static/js/2.7f13ae1c.chunk.js.LICENSE.txt": "./static/js/2.7f13ae1c.chunk.js.LICENSE.txt",
-    "static/media/App.scss": "./static/media/Mont-SemiBold.5cf16df9.ttf"
+    "static/css/main.174286d6.chunk.css.map": "./static/css/main.174286d6.chunk.css.map",
+    "static/js/2.7f13ae1c.chunk.js.LICENSE.txt": "./static/js/2.7f13ae1c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e1f50cee.js",
     "static/js/2.7f13ae1c.chunk.js",
-    "static/css/main.c1aa3110.chunk.css",
+    "static/css/main.174286d6.chunk.css",
     "static/js/main.ae26e815.chunk.js"
   ]
 }
