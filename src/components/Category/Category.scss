@@ -51,6 +51,7 @@
     &::after {
       content: "";
       @include fontSet("Mont Semi Bold", 16px);
+      line-height: 18px;
       color: $colorBackground;
       width: 130px;
       height: 50px;
@@ -124,12 +125,13 @@
   .Category {
     &-Title {
       @include fontSet("Mont Bold", 25px);
+      line-height: 32px;
       margin-bottom: 18px;
     }
 
-    &-ItemTitle,
-    &-Image::after {
+    &-ItemTitle {
       @include fontSet("Mont Semi Bold", 14px);
+      line-height: 20px;
     }
 
     &-Image {
@@ -140,6 +142,7 @@
         width: 100px;
         left: calc(50% - (100px / 2));
         @include fontSet("Mont Semi Bold", 14px);
+        line-height: 20px;
       }
     }
 
@@ -154,6 +157,8 @@
 
     &-CountModel {
       @include fontSet("Mont Regular", 12px);
+      margin-top: 0;
+      line-height: 15px;
     }
   }
 }
@@ -167,7 +172,7 @@
       width: $widthContentMobile;
     }
 
-    &-Item {
+    &-Item:not(:last-child){
       margin-bottom: 24px;
     }
 
@@ -177,6 +182,7 @@
 
       &::after {
         @include fontSet("Mont Semi Bold", 16px);
+        line-height: 20px;
         width: 130px;
         left: calc(50% - (130px / 2));
       }

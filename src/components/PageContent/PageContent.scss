@@ -93,8 +93,6 @@
 
 @media (max-width: $breakPointTablet) {
   .PageContent {
-    margin-top: 58px;
-
     &-Content {
       justify-content: space-evenly;
     }
@@ -104,19 +102,25 @@
 @media (max-width: $breakPointMobile) {
   .PageContent {
     width: 100%;
-    padding-bottom: 60px ;
+    padding-bottom: 24px;
 
     &-Nav {
       margin-bottom: 30px;
     }
-    
+
+    .Breadcrumbs {
+      margin-bottom: 24px;
+    }
+
     &-Title {
       @include fontSet("Mont Bold", 25px);
+      line-height: 25px;
     }
 
     &-Count {
       @include fontSet("Mont Regular", 12px);
-      margin-bottom: 30px;
+      margin-bottom: 24px;
+      line-height: 12px;
     }
 
     &-Results {
@@ -129,7 +133,8 @@
     }
 
     &-FavoritesGif {
-      width: 210px;
+      width: 220px;
+      margin-top: 70px;
     }
 
     &-SearchGif {
@@ -147,7 +152,7 @@
     }
 
     &-FavoritesGif {
-      width: 180px;
+      width: 200px;
     }
   }
 }

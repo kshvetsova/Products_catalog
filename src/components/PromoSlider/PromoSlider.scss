@@ -1,7 +1,7 @@
 @import "../styles/main";
 
 .PromoSlider {
-  width: fit-content;
+  width: $widthContent;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -35,7 +35,7 @@
     margin: 0 16px;
     padding: 0;
     overflow: hidden;
-    width: 72.15vw;
+    width: 72.2vw;
     height: 32vw;
   }
 
@@ -48,8 +48,6 @@
   &-Item {
     display: flex;
     padding: 0;
-    width: 72.2vw;
-    height: 32vw;
   }
 
   &-BlockButtons {
@@ -68,7 +66,7 @@
 }
 
 .image {
-  width: 72.2vw;
+  width: 72.4vw;
   height: 32vw;
 }
 
@@ -78,17 +76,20 @@
 
 @media (max-width: $breakPointMobile) {
   .PromoSlider {
-    &-Item,
-    &-Container,
+    margin-top: 24px;
     .image {
-      height: 34vw;
+      height: 33vw;
     }
   }
 }
 
 @media (max-width: $breakPointMobileSmall) {
   .PromoSlider {
-    width: 100%;
+    width: $widthContentMobile;
+
+    &-Container {
+      margin: 0;
+    }
 
     &-Block {
       width: 100%;
@@ -98,23 +99,24 @@
     &-BlockButtons {
       margin-top: 8px;
     }
+
+    &-Button {
+      width: 100%;
+      max-width: 32px;
+    }
   }
 }
 
-@media (max-width: 485px) {
+@media (max-width: 500px) {
   .PromoSlider {
     &-Container {
-      margin: 0 8px;
+      margin: 0 2vw;
     }
 
     &-Button {
-      width: 24px;
-    }
-
-    &-Item,
-    &-Container,
-    .image {
-      height: 36vw;
+      width: 0;
+      max-width: 25px;
+      flex-grow: 1;
     }
   }
 }

@@ -73,7 +73,6 @@ export const CartPage = () => {
               onClick={() => {
                 setCarts([]);
                 setTotalPriceHidden(true);
-                setTimeout(() => {setTotalPriceHidden(false)}, 3500);
               }}
             >
               Checkout

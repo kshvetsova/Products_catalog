@@ -81,11 +81,12 @@
 
 @media (max-width: $breakPointMobile) {
   .ProductsSlider {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 24px;
+    margin-bottom: 24px;
 
     &-Title {
       @include fontSet("Mont Bold", 25px);
+      line-height: 32px;
     }
   }
 }

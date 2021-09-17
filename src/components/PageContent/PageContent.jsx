@@ -58,7 +58,11 @@ export const PageContent = ({ products, title }) => {
     }
     history.push(`${path}?${searchParams.toString()}`);
 
-  },[sortCarts[path], pageItems[path], page[path], appliedValue[path], path]);
+  },[sortCarts[path],
+     pageItems[path],
+     page[path],
+     appliedValue[path],
+     path]);
 
   let forPage = ((page[path] - 1) * pageItems[path]);
   let toPage = pageItems[path] * page[path];

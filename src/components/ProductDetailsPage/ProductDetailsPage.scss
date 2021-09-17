@@ -225,11 +225,10 @@
       color: $colorPrimary;
       border: 1px solid $colorIcons;
       transition: border-color 0.3s;
-      margin-right: 8px;
       cursor: pointer;
 
-      &:last-child {
-        margin-right: 0;
+      &:not(:last-child) {
+        margin-right: 8px;
       }
 
       &:hover {
@@ -280,10 +279,9 @@
       @include fontSet("Mont Regular", 14px);
       color: $colorSecondary;
       line-height: 21px;
-      margin-bottom: 32px;
 
-      &:last-child {
-        margin-bottom: 0;
+      &:not(:last-child) {
+        margin-bottom: 32px;
       }
     }
 
@@ -361,8 +359,6 @@
 
 @media (max-width: $breakPointTablet) {
   .ProductDetailsPage {
-    margin-top: 58px;
-
     &-ProductId {
       position: absolute;
       right: 0;
@@ -443,9 +439,19 @@
       margin-bottom: 24px;
     }
 
-    &-Title,
+    &-Title {
+      @include fontSet("Mont Bold", 25px);
+      line-height: 30px;
+      margin-bottom: 24px;
+    }
+
     .price {
       @include fontSet("Mont Bold", 25px);
+      line-height: 25px;
+    }
+
+    .About-Item:last-child {
+      margin-bottom: 8px;
     }
 
     .About-ItemTitle {
@@ -467,10 +473,11 @@
     &-ProductId {
       align-self: flex-end;
       position: relative;
-      top: 16px;
+      top: 0;
     }
 
     .BlockImages {
+      margin-bottom: 16px;
       justify-content: space-between;
       &-Item:nth-child(4),
       &-Item:nth-child(5) {

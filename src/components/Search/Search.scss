@@ -22,12 +22,6 @@
       line-height: 17px;
     }
 
-    @media (max-width: 410px ) {
-      &::placeholder {
-        color: rgba(247, 242, 242, 0);
-      }
-    }
-
     &:focus {
       background: $colorHover;
     }

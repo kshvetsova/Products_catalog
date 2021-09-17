@@ -22,7 +22,7 @@ export const Search = () => {
         className="Search-Input"
         type="text"
         name={path}
-        placeholder={`Search in ${path}...`}
+        placeholder={window.innerWidth > 420 ?`Search in ${path}...` : 'Search...'}
         value={setValueInput(path, value)}
         onChange={e => {
           setValue({...value,[path]: e.target.value});

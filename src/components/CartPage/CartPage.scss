@@ -127,8 +127,9 @@
 
 @media (max-width: $breakPointMobile) {
   .CartPage {
+    margin-top: 24px;
     width: $widthContentMobile;
-    margin-bottom: 50px;
+    margin-bottom: 0;
 
     &-Total {
       width: 300px;
@@ -138,6 +139,7 @@
     &-Title,
     &-CounterPrice {
       @include fontSet("Mont Bold", 25px);
+      line-height: 32px;
     }
 
     &-CartGif {
@@ -148,6 +150,7 @@
     &-CheckoutGif {
       width: 280px;
       position: static;
+      margin-top: 30px;
     }
   }
 }
@@ -155,13 +158,12 @@
 @media (max-width: $breakPointMobileSmall) {
   .CartPage {
     &-CheckoutGif {
-      width: 220px;
-      margin-top: 20px;
+      width: 240px;
     }
 
     &-CartGif {
       width: 130px;
-      top: -30px;
+      top: -22px;
     }
   }
 }

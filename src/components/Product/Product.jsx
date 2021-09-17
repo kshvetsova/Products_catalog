@@ -6,7 +6,14 @@ import { Buttons } from '../Buttons';
 import { ProductsContext } from '../../ProductsProvider';
 import classNames from 'classnames';
 
-export const Product = ({ images, name, price, tech, id, type, option }) => {
+export const Product = ({
+  images,
+  name,
+  price,
+  tech,
+  id,
+  type,
+  option }) => {
   const { path } = useContext(ProductsContext);
   const history = useHistory();
 
