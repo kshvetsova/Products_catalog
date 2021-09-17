@@ -81,8 +81,8 @@
 
 @media (max-width: $breakPointMobile) {
   .ProductsSlider {
-    margin-top: 24px;
-    margin-bottom: 24px;
+    margin-top: 32px;
+    margin-bottom: 32px;
 
     &-Title {
       @include fontSet("Mont Bold", 25px);

@@ -6,13 +6,13 @@ import './PromoSlider.scss';
 export const PromoSlider = () => {
   const [images, setImages] = useState([...initialImages]);
   const [imageWidth, setImageWidth] = useState(
-    Math.ceil(window.innerWidth * 72.4 /100)
+    Math.ceil(window.innerWidth * 72.2 /100)
   );
   const [currentPosition, setCurrentPosition] = useState(1);
   const [currentImage, setCurrentImage] = useState(0);
 
   const handleResize = () => {
-    setImageWidth(Math.ceil(window.innerWidth * 72.4 /100))
+    setImageWidth(Math.ceil(window.innerWidth * 72.2 /100))
   }
 
   const handleClickNext = () => {
