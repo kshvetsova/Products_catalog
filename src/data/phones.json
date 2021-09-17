@@ -6,7 +6,7 @@
     "name": "Apple iPhone 12 64GB Purple (MJNM3)",
     "color": "Purple",
     "option": "64 GB",
-    "price": [804, 1039],
+    "price": [805, 1039],
     "images": [
       "img/iphone-12/purple-1.jpg",
       "img/iphone-12/purple-2.jpg",
@@ -49,7 +49,7 @@
     "name": "Apple iPhone 12 64GB Red (MGJ73)",
     "color": "Red",
     "option": "64 GB",
-    "price": [1039],
+    "price": [804, 1039],
     "images": [
       "img/iphone-12/red-1.jpg",
       "img/iphone-12/red-2.jpg",
@@ -70,7 +70,7 @@
     "name": "Apple iPhone 12 64GB White (MGJ63)",
     "color": "White",
     "option": "64 GB",
-    "price": [1039],
+    "price": [804, 1039],
     "images": [
       "img/iphone-12/white-1.jpg",
       "img/iphone-12/white-2.jpg",
@@ -91,7 +91,7 @@
     "name": "Apple iPhone 12 64GB Green (MGJ93)",
     "color": "Green",
     "option": "64 GB",
-    "price": [822, 1039],
+    "price": [803, 1039],
     "images": [
       "img/iphone-12/green-1.jpg",
       "img/iphone-12/green-2.jpg",

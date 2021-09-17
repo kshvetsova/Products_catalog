@@ -3,7 +3,7 @@ import './Footer.scss';
 
 export const Footer = () => (
   <div className="Footer">
-    <a className="Footer-Logo Logo" href="/">
+    <a className="Footer-Logo Logo" href="#/home">
       <img
         className="Logo-Image"
         src="./img/icons-page/logo.svg"

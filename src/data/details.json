@@ -11,12 +11,12 @@
     ],
     "options": ["64 GB", "128 GB", "256 GB"],
     "specs":[
-      ["Resolution", "2532×1170"],
+      ["Resolution", "2532 × 1170"],
       ["Processor", "Apple A14 Bionic"],
       ["Camera", "12Mp + 12Мp + 12Мp"],
       ["Zoom", "Optical, 2x"],
       ["Cell", "GSM/EDGE, UMTS/HSPA+"],
-      ["Size", "146.7×71.5×7.4 mm"],
+      ["Size", "146.7 × 71.5 × 7.4 mm"],
       ["Weight", "164 grams"]
     ],
     "about": [
@@ -39,12 +39,12 @@
       ["Silver", "#e2e4de"]
     ],
     "specs":[
-      ["Resolution", "2532×1170"],
+      ["Resolution", "2532 × 1170"],
       ["Processor", "Apple A14 Bionic"],
       ["Camera", "12Mp + 12Мp + 12Мp"],
       ["Zoom", "Optical, 2x"],
       ["Cell", "GSM/EDGE, UMTS/HSPA+"],
-      ["Size", "146.7×71.5×7.4 mm"],
+      ["Size", "146.7 × 71.5 × 7.4 mm"],
       ["Weight", "189 grams"]
     ],
     "about": [
@@ -67,12 +67,12 @@
       ["Gold", "#fad7bc"]
     ],
     "specs":[
-      ["Resolution", "2436×1125"],
+      ["Resolution", "2436 × 1125"],
       ["Processor", "Apple A13 Bionic"],
       ["Camera", "12Mp + 12Мp + 12Мp"],
       ["Zoom", "Optical, 2x"],
       ["Cell", "GSM/EDGE, UMTS/HSPA+"],
-      ["Size", "144×71.4×8.1 mm"],
+      ["Size", "144 × 71.4 × 8.1 mm"],
       ["Weight", "188 grams"]
     ],
     "about": [
@@ -206,12 +206,12 @@
       ["Sky Blue", "#cee3f6"]
     ],
     "specs":[
-      ["Resolution", "2360×1640"],
+      ["Resolution", "2360 × 1640"],
       ["Processor", "Apple A14 Bionic"],
       ["Camera", "12 Mp + 7 Мp"],
       ["Display", "Liquid Retina"],
       ["Cell", "GSM/EDGE, UMTS/HSPA+"],
-      ["Size", "247.6×178.5×6.1 mm"],
+      ["Size", "247.6 × 178.5 × 6.1 mm"],
       ["Weight", "458 grams"]
     ],
     "about": [
@@ -233,12 +233,12 @@
       ["Gold", "#f6ceb9"]
     ],
     "specs":[
-      ["Resolution", "2160×1620"],
+      ["Resolution", "2160 × 1620"],
       ["Processor", "Apple A12 Bionic"],
       ["Camera", "8 Mp + 1.2 Мp"],
       ["Display", "Retina"],
       ["Cell", "GSM/EDGE, UMTS/HSPA+"],
-      ["Size", "250.6×174.1×7.5 mm"],
+      ["Size", "250.6 × 174.1 × 7.5 mm"],
       ["Weight", "495 grams"]
     ],
     "about": [
@@ -259,12 +259,12 @@
       ["Space Gray", "#68696d"]
     ],
     "specs":[
-      ["Resolution", "2388×1668"],
+      ["Resolution", "2388 × 1668"],
       ["Processor", "Apple A12Z Bionic"],
       ["Camera", "12 Mp + 10 Мp + 7 Mp"],
       ["Display", "Liquid Retina"],
       ["Cell", "GSM/EDGE, UMTS/HSPA+"],
-      ["Size", "247.6×178.5×5.9 mm"],
+      ["Size", "247.6 × 178.5 × 5.9 mm"],
       ["Weight", "473 grams"]
     ],
     "about": [
@@ -285,12 +285,12 @@
       ["Space Gray", "#68696d"]
     ],
     "specs":[
-      ["Resolution", "2732×2048"],
+      ["Resolution", "2732 × 2048"],
       ["Processor", "Apple A12Z Bionic"],
       ["Camera", "12 Mp + 10 Мp + 7Mp"],
       ["Display", "Liquid Retina"],
       ["Cell", "GSM/EDGE, UMTS/HSPA+"],
-      ["Size", "280.6×214.9×5.9 mm"],
+      ["Size", "280.6 × 214.9 × 5.9 mm"],
       ["Weight", "641 grams"]
     ],
     "about": [
@@ -311,12 +311,12 @@
       ["Space Gray", "#68696d"]
     ],
     "specs":[
-      ["Resolution", "2732×2048"],
+      ["Resolution", "2732 × 2048"],
       ["Processor", "Apple A12Z Bionic"],
       ["Camera", "12 Mp + 10 Мp + 12Mp"],
       ["Display", "Liquid Retina XDR"],
       ["Cell", "GSM/EDGE, UMTS/HSPA+"],
-      ["Size", "280.6×214.9×6.4 mm"],
+      ["Size", "280.6 × 214.9 × 6.4 mm"],
       ["Weight", "682 grams"]
     ],
     "about": [

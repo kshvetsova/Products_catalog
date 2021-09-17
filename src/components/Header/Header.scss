@@ -11,6 +11,8 @@
   position: sticky;
   z-index: 5;
   top: 0;
+  left: 0;
+  right: 0;
 
   &-SectionLeft {
     display: flex;
@@ -149,6 +151,7 @@
       height: 34px;
       top: 54px;
       left: 0;
+      right: 0;
       padding: 0 24px;
       background: rgba(226, 230, 233, 0.95);
 
