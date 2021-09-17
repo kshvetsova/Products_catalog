@@ -171,8 +171,10 @@ export const PageContent = ({ products, title }) => {
           { visibleProducts.map(product => <Product {...product} key={product.id}/>)}
         </div>
       </div>
-      {path !== 'favorites' && pageItems[path] !== "All items" && (
-      <Pagination total={sortProducts.length}/>)}
+      {(path !== 'favorites'
+        && pageItems[path] !== "All items"
+        && !appliedValue[path]) && (
+        <Pagination total={sortProducts.length}/>)}
     </div>
   )
 }

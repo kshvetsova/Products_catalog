@@ -59,11 +59,13 @@
   .disabled_next {
     background-image: url("../icons/next-disabled.svg");
     border-color: $colorElements;
+    cursor: not-allowed;
   }
 
   .disabled_prev {
     background-image: url("../icons/prev-disabled.svg");
     border-color: $colorElements;
+    cursor: not-allowed;
   }
 }
 
