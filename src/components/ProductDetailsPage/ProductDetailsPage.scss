@@ -470,6 +470,10 @@
       align-items: center;
     }
 
+    .BlockOptions {
+      width: 100%;
+    }
+
     &-ProductId {
       align-self: flex-end;
       position: relative;
@@ -492,6 +496,10 @@
         width: 70%;
         height: 70%;
       }
+    }
+
+    .Back {
+      margin-bottom: 32px;
     }
   }
 }

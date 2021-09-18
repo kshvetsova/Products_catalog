@@ -93,6 +93,12 @@
 
 @media (max-width: $breakPointMobileSmall) {
   .ProductsSlider {
+    width: calc(100vw - 49px);
+  }
+}
+
+@media (max-width: 325px) {
+  .ProductsSlider {
     width: $widthContentMobile;
   }
 }
