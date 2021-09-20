@@ -78,6 +78,8 @@
   }
 
   &-Name {
+    display: flex;
+    width: 100%;
     @include fontSet("Mont Regular", 14px);
     color: $colorPrimary;
     line-height: 21px;
