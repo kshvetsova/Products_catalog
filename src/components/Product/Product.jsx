@@ -38,9 +38,9 @@ export const Product = ({
         />
       </button>
       <div className="Product-Info">
-        <h3 className="Product-Name">
+        <p className="Product-Name">
           {name}
-        </h3>
+        </p>
         <div className="Product-PriceBlock PriceBlock">
           <div className="PriceBlock-Price">{`$${price[0]}`}</div>
           <div className="PriceBlock-Sale">

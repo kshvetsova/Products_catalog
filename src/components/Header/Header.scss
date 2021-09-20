@@ -86,13 +86,12 @@
     }
 
     &-NavContent {
+      display: flex;
+      align-items: center;
       position: relative;
       transition: transform 0.3s;
       &:hover {
         transform: scale(1.3);
-        @media (max-width: $breakPointMobileSmall) {
-          transform: scale(1.2);
-        }
       }
     }
 
