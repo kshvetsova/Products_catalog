@@ -80,6 +80,7 @@
   &-Name {
     display: flex;
     width: 100%;
+    max-height: 63px;
     @include fontSet("Mont Regular", 14px);
     color: $colorPrimary;
     line-height: 21px;
