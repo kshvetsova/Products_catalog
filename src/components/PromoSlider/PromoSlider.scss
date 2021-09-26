@@ -36,6 +36,7 @@
     padding: 0;
     overflow: hidden;
     width: 72.1vw;
+    object-fit: fill;
     height: 32vw;
   }
 
@@ -67,7 +68,9 @@
 
 .image {
   width: 72.2vw;
-  height: 32vw;
+  height: 32.2vw;
+  object-fit: cover;
+  object-position: center;
 }
 
 .button_active {
@@ -77,8 +80,11 @@
 @media (max-width: $breakPointMobile) {
   .PromoSlider {
     margin-top: 32px;
+    &-Container {
+      height: 38vw;
+    }
     .image {
-      height: 34vw;
+      height: 100%;
     }
   }
 }
