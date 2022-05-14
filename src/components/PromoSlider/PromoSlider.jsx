@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { initialImages } from '../../helpers/initial-images';
 import './PromoSlider.scss';
 
-export const PromoSlider = () => {
+export const PromoSlider = React.memo(() => {
   const [images, setImages] = useState([...initialImages]);
   const [imageWidth, setImageWidth] = useState(
     Math.ceil(window.innerWidth * 72.2 /100)
@@ -13,7 +13,7 @@ export const PromoSlider = () => {
 
   const handleResize = () => {
     setImageWidth(Math.ceil(window.innerWidth * 72.2 /100))
-  }
+  };
 
   const handleClickNext = () => {
     window.addEventListener('resize', handleResize);
@@ -89,4 +89,4 @@ export const PromoSlider = () => {
       </div>
     </div>
   )
-}
+})

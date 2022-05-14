@@ -1,8 +1,7 @@
 import React, { useContext, useMemo } from 'react';
 import { ProductsContext } from '../../ProductsProvider';
-import { useHistory, useLocation } from 'react-router';
+import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
 import { Product } from '../Product';
 import { SelectSort } from '../SelectSort';
 import { SelectItems } from '../SelectItems';
@@ -10,7 +9,7 @@ import { initialItemsPageSelect } from '../../helpers/select';
 import './PageContent.scss';
 import { Pagination } from '../Pagination';
 
-export const PageContent = ({ products, title }) => {
+export const PageContent = React.memo(({ products, title }) => {
   const {
     appliedValue,
     path,
@@ -20,7 +19,7 @@ export const PageContent = ({ products, title }) => {
     setPageItems
   } = useContext(ProductsContext);
   const { search } = useLocation();
-  const history = useHistory();
+  const navigate = useNavigate();
   const searchParams = new URLSearchParams(search);
 
   window.addEventListener('resize', (e) => {
@@ -56,16 +55,21 @@ export const PageContent = ({ products, title }) => {
         searchParams.delete('query');
       }
     }
-    history.push(`${path}?${searchParams.toString()}`);
+    navigate(`/${path}?${searchParams.toString()}`);
 
-  },[sortCarts[path],
-     pageItems[path],
-     page[path],
-     appliedValue[path],
-     path]);
+  }, [sortCarts[path],
+      pageItems[path],
+      page[path],
+      appliedValue[path]
+    ]
+  );
 
-  let forPage = ((page[path] - 1) * pageItems[path]);
-  let toPage = pageItems[path] * page[path];
+  let forPage = useMemo(() => (page[path] - 1) * pageItems[path],
+    [page[path], pageItems[path]]
+  );
+  let toPage = useMemo(() => pageItems[path] * page[path],
+    [page[path], pageItems[path]]
+  );
 
   const sortProducts = useMemo(() => {
     switch(sortCarts[path]) {
@@ -95,12 +99,15 @@ export const PageContent = ({ products, title }) => {
       }
       return sortProducts;
     }
+
+    return [];
   }, [appliedValue[path],
-     sortProducts,
-     products,
-     pageItems[path],
-     forPage,
-     toPage]);
+      sortProducts,
+      products,
+      pageItems[path],
+      forPage,
+      toPage]
+  );
 
   return (
     <div className="PageContent">
@@ -156,7 +163,9 @@ export const PageContent = ({ products, title }) => {
             <div className="PageContent-SelectsContainer">
               <p className="PageContent-SelectName">Sort by</p>
               <div className="PageContent-SelectSort">
-                <SelectSort list={['Alphabetically', 'Newest', 'Cheapest']}/>
+                <SelectSort
+                  list={['Alphabetically', 'Newest', 'Cheapest']}
+                />
               </div>
             </div>
             <div className="PageContent-SelectsContainer PageContent-SelectsContainer_hidden">
@@ -167,17 +176,17 @@ export const PageContent = ({ products, title }) => {
             </div>
           </div>
         )}
-        <div className="PageContent-Content">
-          { visibleProducts.map(product => <Product {...product} key={product.id}/>)}
-        </div>
+        <ul className="PageContent-Content">
+          {visibleProducts.map(product => <Product {...product} />)}
+        </ul>
       </div>
       {(path !== 'favorites'
         && pageItems[path] !== "All items"
         && !appliedValue[path]) && (
-        <Pagination total={sortProducts.length}/>)}
+        <Pagination />)}
     </div>
   )
-}
+})
 
 PageContent.propTypes = {
   products: PropTypes.array.isRequired,

@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
+import React, { useContext, useMemo } from 'react';
 import { ProductsContext } from '../../ProductsProvider';
 import classNames from 'classnames';
 import './Pagination.scss';
 
-export const Pagination = () => {
+export const Pagination = React.memo(() => {
   const {
     productsList,
     pageItems,
@@ -12,7 +12,10 @@ export const Pagination = () => {
     path,
   } = useContext(ProductsContext);
 
-  const lastPage = Math.ceil(productsList[path].length / pageItems[path]);
+  const lastPage = useMemo(() => (
+    Math.ceil(productsList[path].length / pageItems[path])),
+    [productsList[path], pageItems[path]]
+  );
 
   return (
     <div className="Pagination">
@@ -58,4 +61,4 @@ export const Pagination = () => {
       </button>
     </div>
   );
-}
+})

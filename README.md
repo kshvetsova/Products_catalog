@@ -81,3 +81,4 @@ The design 1440px, adaptive for:
 1. JavaScript
 1. React, React router, React Hooks
 1. localStorage/JSON
+1. PropTypes

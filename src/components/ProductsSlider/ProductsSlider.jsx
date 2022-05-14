@@ -5,7 +5,7 @@ import { Product } from '../Product';
 import './ProductsSlider.scss';
 
 
-export const ProductsSlider = ({ title, products }) => {
+export const ProductsSlider = React.memo(({ title, products }) => {
   const [sliderWidth, setSliderWidth] = useState(getSliderWidth())
   const [currentPosition, setCurrentPosition] = useState(0);
   const [cartLength, setCartLength] = useState(getCartLength());
@@ -84,23 +84,22 @@ export const ProductsSlider = ({ title, products }) => {
             }}
           >
             {products.map(product => (
-              <div
+              <ul
                 className="ProductsSlider-Product"
-                key={product.id}
                 style={{
                   marginRight: `${sliderWidth < 555 ? 0 : margin}px`,
                   marginLeft: `${sliderWidth < 555 ? marginLeft / 2 : 0}px`
                 }}
               >
                 <Product {...product} />
-              </div>
+              </ul>
             ))}
           </div>
         </div>
       </div>
     </>
   )
-}
+})
 
 ProductsSlider.propTypes = {
   products: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,

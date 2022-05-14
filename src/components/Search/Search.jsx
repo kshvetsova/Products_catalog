@@ -4,7 +4,7 @@ import { setValueInput, initialValue } from '../../helpers/search';
 import './Search.scss';
 import { ProductsContext } from '../../ProductsProvider';
 
-export const Search = () => {
+export const Search = React.memo(() => {
   const [value, setValue] = useState(initialValue);
   const {
     applyValue,
@@ -58,4 +58,4 @@ export const Search = () => {
       )}
     </div>
   )
-}
+})

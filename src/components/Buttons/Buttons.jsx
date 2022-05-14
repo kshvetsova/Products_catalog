@@ -3,8 +3,13 @@ import { ProductsContext } from '../../ProductsProvider';
 import { PropTypes } from 'prop-types';
 import './Buttons.scss';
 
-export const Buttons = ({ id, price, name, image }) => {
-  const { carts, setCarts, favorites, setFavorites } = useContext(ProductsContext);
+export const Buttons = React.memo(({ id, price, name, image }) => {
+  const {
+    carts,
+    setCarts,
+    favorites,
+    setFavorites
+  } = useContext(ProductsContext);
 
   return (
     <div className="Buttons">
@@ -46,7 +51,7 @@ export const Buttons = ({ id, price, name, image }) => {
       )}
     </div>
   )
-};
+})
 
 Buttons.propTypes = {
   id: PropTypes.number.isRequired,

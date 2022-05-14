@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './CartPage.scss';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { ProductCart } from '../ProductCart';
 import { ProductsContext } from '../../ProductsProvider';
 
-export const CartPage = () => {
-  const history = useHistory();
+export const CartPage = React.memo(() => {
+  const navigate = useNavigate();
   const { carts, setCarts } = useContext(ProductsContext);
   const [totalPriceHidden, setTotalPriceHidden] = useState(false);
   const [totalPrice, setTotalPrice] = useState(
@@ -37,7 +37,7 @@ export const CartPage = () => {
         <button
           className="Back-Button"
           type="button"
-          onClick={() => history.goBack(-1)}
+          onClick={() => navigate(-1)}
         >
           Back
         </button>
@@ -89,4 +89,4 @@ export const CartPage = () => {
       </div>
     </div>
   )
-}
+})

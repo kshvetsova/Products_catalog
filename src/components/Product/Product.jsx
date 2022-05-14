@@ -1,42 +1,38 @@
 import React, {useContext} from 'react';
 import './Product.scss';
-import { useHistory } from 'react-router';
+import { NavLink } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 import { Buttons } from '../Buttons';
 import { ProductsContext } from '../../ProductsProvider';
 import classNames from 'classnames';
 
-export const Product = ({
+export const Product = React.memo(({
   images,
   name,
   price,
   tech,
   id,
   type,
-  option }) => {
+  option}) => {
   const { path } = useContext(ProductsContext);
-  const history = useHistory();
 
   return (
-    <div className="Product">
-      <button
+    <li className="Product">
+      <NavLink
         className="Product-ImageContainer"
-        type="button"
-        onClick={() => history.push(
-          path.includes(`${type}/product`)
-            ? `${id}`
-            : `${type}/product/${id}`
-        )}
+        to={path.includes(`/${type}/product`)
+          ? `/${id}`
+          : `/${type}/product/${id}`}
       >
         <img
           className={classNames('Product-Image', {
             watches_image: option === "40mm",
           })}
-          src={images[0]}
+          src={`./${images[0]}`}
           alt="Iphone"
           width="190px"
         />
-      </button>
+      </NavLink>
       <div className="Product-Info">
         <p className="Product-Name">
           {name}
@@ -57,10 +53,15 @@ export const Product = ({
           ))}
         </ul>
       </div>
-      <Buttons id={id} price={price[0]} name={name} image={images[0]}/>
-    </div>
+      <Buttons
+        id={id}
+        price={price[0]}
+        name={name}
+        image={images[0]}
+      />
+    </li>
   );
-}
+})
 
 Product.propTypes = {
   images: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,

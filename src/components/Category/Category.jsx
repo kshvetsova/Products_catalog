@@ -4,7 +4,7 @@ import category from '../../data/category.json';
 import { ProductsContext } from '../../ProductsProvider';
 import './Category.scss';
 
-export const Category = () => {
+export const Category = React.memo(() => {
   const { productsList } = useContext(ProductsContext);
 
   return (
@@ -31,4 +31,4 @@ export const Category = () => {
       </ul>
     </div>
   )
-}
+})

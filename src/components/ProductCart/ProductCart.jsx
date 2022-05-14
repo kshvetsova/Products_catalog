@@ -4,7 +4,7 @@ import './ProductCart.scss';
 import { ProductsContext } from '../../ProductsProvider';
 
 
-export const ProductCart = ({
+export const ProductCart = React.memo(({
   name,
   price,
   image,
@@ -72,7 +72,7 @@ export const ProductCart = ({
       </div>
     </div>
   )
-}
+})
 
 ProductCart.propTypes = {
   image: PropTypes.string.isRequired,

@@ -1,12 +1,11 @@
 import React, { useContext } from 'react';
 import './Header.scss';
-import { NavLink } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import { useLocation, NavLink } from 'react-router-dom';
 import { navSectionLeftItems } from '../../helpers/nav-items';
 import { Search } from '../Search';
 import { ProductsContext } from '../../ProductsProvider';
 
-export const Header = () => {
+export const Header = React.memo(() => {
   const { carts, favorites } = useContext(ProductsContext);
   const { search } = useLocation();
 
@@ -62,4 +61,4 @@ export const Header = () => {
       </div>
     </div>
   )
-}
+})

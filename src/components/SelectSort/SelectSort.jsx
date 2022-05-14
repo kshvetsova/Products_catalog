@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './SelectSort.scss';
 import { ProductsContext } from '../../ProductsProvider';
 
-export const SelectSort = ({ list }) => {
+export const SelectSort = React.memo(({ list }) => {
   const {
     path,
     toggleSort,
@@ -51,7 +51,7 @@ export const SelectSort = ({ list }) => {
       )}
     </div>
   );
-}
+})
 
 SelectSort.propTypes = {
   list: PropTypes.array.isRequired,

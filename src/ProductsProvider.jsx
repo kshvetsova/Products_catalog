@@ -12,27 +12,7 @@ import {
   initialItemsPageSelect } from './helpers/select';
 import { initialPage } from './helpers/pagination';
 
-export const ProductsContext = React.createContext({
-  favourites: [],
-  setFavorites: () => {},
-  carts: [],
-  setCarts: () => {},
-  productsList: {},
-  appliedValue: {},
-  setAppliedValue: () => {},
-  applyValue: () => {},
-  path: '',
-  sortCarts: {},
-  setSortCarts: () => {},
-  setToggleSort: () => {},
-  toggleSort: {},
-  pageItems: {},
-  setPageItems: () => {},
-  toggleItemsPage: {},
-  setToggleItemsPage: () => {},
-  page: {},
-  setPage: () => {},
-});
+export const ProductsContext = React.createContext({});
 const root = document.getElementById('root');
 
 export const ProductsProvider = ({ children }) => {
@@ -85,12 +65,12 @@ export const ProductsProvider = ({ children }) => {
       setToggleItemsPage,
       setPage,
       page,
-    }),[ favorites, carts, productsList,
-    appliedValue,applyValue, setAppliedValue,
-    path, sortCarts, toggleSort,
-    pageItems, toggleItemsPage, page
-  ]);
-
+  }),
+    [ favorites, carts, productsList, appliedValue,
+      applyValue, setAppliedValue, path, sortCarts,
+      toggleSort, pageItems, toggleItemsPage, page
+    ]
+  );
 
   return (
     <ProductsContext.Provider value={contextValue}>

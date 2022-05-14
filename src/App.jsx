@@ -1,7 +1,5 @@
 import React from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
-import { ProductsProvider } from './ProductsProvider';
-import { Header } from './components/Header';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { HomePage } from './components/HomePage';
 import { PhonesPage } from './components/PhonesPage';
 import { TabletsPage } from './components/TabletsPage';
@@ -9,52 +7,21 @@ import { WatchesPage } from './components/WatchesPage';
 import { ProductDetailsPage } from './components/ProductDetailsPage';
 import { FavoritesPage } from './components/FavoritesPage';
 import { CartPage } from './components/CartPage';
-import { Footer } from './components/Footer';
-import { Scroll } from './components/Scroll';
-import './App.scss';
+import { Layout } from './components/Layout/Layout';
 
-const App = () => (
-  <div className="App">
-    <ProductsProvider>
-      <Header />
-      <div className="App-Main">
-        <Switch>
-          <Route path="/home" component={HomePage} />
-          <Route path="/phones">
-            <Switch>
-              <Route
-                path="/:typeProduct?/product/:productId?"
-                component={ProductDetailsPage} />
-              <PhonesPage />
-            </Switch>
-          </Route>
-          <Route path="/tablets">
-            <Switch>
-              <Route
-                path="/:typeProduct?/product/:productId?"
-                component={ProductDetailsPage}
-              />
-              <TabletsPage />
-            </Switch>
-          </Route>
-          <Route path="/watches">
-            <Switch>
-              <Route
-                path="/:typeProduct?/product/:productId?"
-                component={ProductDetailsPage}
-              />
-              <WatchesPage />
-            </Switch>
-          </Route>
-          <Route path="/favorites" component={FavoritesPage} />
-          <Route path="/cart" component={CartPage} />
-          <Redirect path="/" to="/home" exact/>
-        </Switch>
-      </div>
-    </ProductsProvider>
-    <Scroll />
-    <Footer />
-  </div>
+export const App = () => (
+  <Routes>
+    <Route path="/" element={<Layout />}>
+      <Route index element={<Navigate to="home" replace/>}/>
+      <Route path="home" element={<HomePage />} />
+      <Route path="phones" element={<PhonesPage />} />
+      <Route
+        path=":typeProduct/product/:productId"
+        element={<ProductDetailsPage />} />
+      <Route path="tablets" element={<TabletsPage />} />
+      <Route path="watches" element={<WatchesPage />} />
+      <Route path="favorites" element={<FavoritesPage />} />
+      <Route path="cart" element={<CartPage />} />
+    </Route>
+  </Routes>
 )
-
-export default App;

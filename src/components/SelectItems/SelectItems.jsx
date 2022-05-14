@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { ProductsContext } from '../../ProductsProvider';
 
-export const SelectItems = ({ list }) => {
+export const SelectItems = React.memo(({ list }) => {
   const {
     path,
     setPage,
@@ -58,8 +58,8 @@ export const SelectItems = ({ list }) => {
       )}
     </div>
   );
-}
+})
 
 SelectItems.propTypes = {
   list: PropTypes.array.isRequired,
-}
+};

@@ -1,17 +1,16 @@
 import React, {useEffect, useState, useMemo, useCallback, useContext } from 'react';
 import './ProductDetailsPage.scss';
-import { useHistory, useParams } from 'react-router';
-import { NavLink } from 'react-router-dom';
+import { useNavigate, useParams, NavLink } from 'react-router-dom';
 import details from '../../data/details.json';
 import classNames from 'classnames';
 import { Buttons } from '../Buttons';
 import { ProductsSlider } from '../ProductsSlider';
 import { ProductsContext } from '../../ProductsProvider';
 
-export const ProductDetailsPage = () => {
+export const ProductDetailsPage = React.memo(() => {
   const { productsList } = useContext(ProductsContext);
   const { productId, typeProduct } = useParams() || '0';
-  const history = useHistory();
+  const navigate = useNavigate();
   const [product, setProduct] = useState(
     productsList[typeProduct].find(item => item.id === +productId)
   );
@@ -19,17 +18,21 @@ export const ProductDetailsPage = () => {
   const [imageHover, setImageHover] = useState('');
   const [colorList, setColorList] = useState([]);
   const [optionList, setOptionList] = useState([]);
-  const { name , images, model, color, id , type, option, price, tech } = product;
+  const {
+    name , images, model, color, id , type, option, price, tech
+  } = product;
 
   useEffect(() => {
-    setProduct(productsList[typeProduct].find(item => item.id === +productId));
+    setProduct(productsList[typeProduct]
+      .find(item => item.id === +productId));
   }, [productId, typeProduct]);
 
   useEffect(() => {
     setImage(images[0]);
     if (product) {
-      setColorList(details.find(item => item.models === model).colors);
-      setOptionList(details.find(item => item.models === model).options);
+      const productItem = details.find(item => item.models === model);
+      setColorList(productItem ? productItem.colors : []);
+      setOptionList(productItem ? productItem.options : []);
     }
 }, [productId, typeProduct, product]);
 
@@ -49,17 +52,20 @@ export const ProductDetailsPage = () => {
       item.model === model)).id
   ), [productId, product]);
 
-  const description = useMemo(() => (
-    [...details].find(item => item.models === model && item.type === type).about
-  ), [product]);
+  const detailsProduct = useMemo(() => {
+    const productItem = [...details]
+      .find(item => item.models === model && item.type === type);
 
-  const techSpecsList = useMemo(() => (
-    [...details].find(item => item.models === model && item.type === type).specs
-  ), [product]);
+    return {
+      description: productItem? productItem.about : [],
+      techSpecsList: productItem? productItem.specs : [],
+    }
+  }, [product]);
 
-  const productsSlider = useMemo(() => (
-    [...productsList[typeProduct]].filter(item => item.id !== +productId)
-  ), [productId]);
+  const productsSlider = useMemo(() => [...productsList[typeProduct]]
+    .filter(item => item.id !== +productId)
+  , [productId]);
+
 
   return (
     <div className="ProductDetailsPage">
@@ -75,7 +81,7 @@ export const ProductDetailsPage = () => {
           />
           <button
             className="Breadcrumbs-Item"
-            onClick={() => history.push(`/${type}`)}
+            onClick={() => navigate(`/${type}`)}
             type="button"
           >
             {type[0].toUpperCase() + type.slice(1)}
@@ -88,7 +94,7 @@ export const ProductDetailsPage = () => {
           <button
             className="Back-Button"
             type="button"
-            onClick={() => history.goBack(-1)}
+            onClick={() => navigate(-1)}
           >
             Back
           </button>
@@ -111,7 +117,7 @@ export const ProductDetailsPage = () => {
                 onMouseLeave={() => setImageHover('')}
               >
                 <img
-                  src={item}
+                  src={`./${item}`}
                   alt="Product"
                   width="64px"
                   height="64px"
@@ -121,7 +127,7 @@ export const ProductDetailsPage = () => {
             ))}
           </ul>
           <img
-            src={imageHover ? imageHover : image}
+            src={imageHover ? `./${imageHover}` : `./${image}`}
             alt="Product"
             width="200px"
             height="200px"
@@ -139,7 +145,7 @@ export const ProductDetailsPage = () => {
                     className={classNames('Colors-Item', {
                       color_active: item === color,
                     })}
-                    onClick={() => history.push(
+                    onClick={() => navigate(
                       `/${type}/product/${findProductColor(item)}`
                     )}
                   >
@@ -165,7 +171,7 @@ export const ProductDetailsPage = () => {
                     className={classNames('Options-Item', {
                       option_active: item === option,
                     })}
-                    onClick={() => history.push(
+                    onClick={() => navigate(
                       `/${type}/product/${findProductOption(item)}`
                     )}
                   >
@@ -183,7 +189,12 @@ export const ProductDetailsPage = () => {
               </div>
             </div>
             <div className="BlockOptions-Buttons BlockOptions-Buttons_gap">
-              <Buttons id={id} name={name} price={price[0]} image={images[0]}/>
+              <Buttons
+                id={id}
+                name={name}
+                price={price[0]}
+                image={`./${images[0]}`}
+              />
             </div>
             <ul className="BlockOptions-Details Details">
               {tech.map(([name, value]) => (
@@ -201,7 +212,7 @@ export const ProductDetailsPage = () => {
         <div className="ProductDetailsPage-About About">
           <h2 className="About-Title">About</h2>
           <ul className="About-List">
-            {description.map(([title, text]) => (
+            {detailsProduct.description.map(([title, text]) => (
                <li className="About-Item" key={title}>
                  <h3 className="About-ItemTitle">{title}</h3>
                  <p className="About-ItemText">{text}</p>
@@ -212,7 +223,7 @@ export const ProductDetailsPage = () => {
         <div className="ProductDetailsPage-TechSpecs TechSpecs">
           <h2 className="TechSpecs-Title">Tech specs</h2>
           <ul className="TechSpecs-List">
-            {techSpecsList.map(([name, value]) => (
+            {detailsProduct.techSpecsList.map(([name, value]) => (
                <li className="TechSpecs-Item" key={value}>
                  <h3 className="TechSpecs-Name">{name}</h3>
                  <p className="TechSpecs-Value">{value}</p>
@@ -224,4 +235,4 @@ export const ProductDetailsPage = () => {
       <ProductsSlider title="You may also like" products={productsSlider} />
     </div>
   )
-}
+})

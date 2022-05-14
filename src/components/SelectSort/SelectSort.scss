@@ -23,6 +23,11 @@
     justify-content: space-between;
   }
 
+  .button-image {
+    transform-origin: center;
+    transition: transform 0.3s;
+  }
+
   .image_rotate > .button-image {
     transform: rotate(180deg);
   }

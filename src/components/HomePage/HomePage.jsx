@@ -5,7 +5,7 @@ import { Category } from '../Category';
 import phones from '../../data/phones.json';
 import watches from '../../data/watches.json';
 
-export const HomePage = () => {
+export const HomePage = React.memo(() => {
   const hotProductList = useMemo(() => (
     [...phones]
       .filter(cart => cart.price.length > 1)
@@ -25,4 +25,4 @@ export const HomePage = () => {
       <ProductsSlider title="Brand new models" products={newProductList}/>
     </div>
   )
-}
+})
