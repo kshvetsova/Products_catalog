@@ -91,7 +91,9 @@ export const ProductsSlider = React.memo(({ title, products }) => {
                   marginLeft: `${sliderWidth < 555 ? marginLeft / 2 : 0}px`
                 }}
               >
-                <Product {...product} />
+                <li key={product.id}>
+                  <Product {...product} />
+                </li>
               </ul>
             ))}
           </div>
